@@ -2,8 +2,8 @@ FROM php:8.1-apache
 
 # System deps + PHP extensions Laravel needs
 RUN apt-get update && apt-get install -y \
-        git unzip libzip-dev libonig-dev libxml2-dev sqlite3 libsqlite3-dev \
-    && docker-php-ext-install pdo pdo_mysql pdo_sqlite mbstring zip bcmath \
+        git unzip libzip-dev libonig-dev libxml2-dev sqlite3 libsqlite3-dev libpq-dev \
+    && docker-php-ext-install pdo pdo_mysql pdo_sqlite pdo_pgsql pgsql mbstring zip bcmath \
     && rm -rf /var/lib/apt/lists/*
 
 # Apache: serve Laravel's /public as the docroot, enable rewrite for pretty URLs
@@ -22,7 +22,6 @@ COPY . .
 
 RUN composer install --no-dev --optimize-autoloader --no-interaction \
     && mkdir -p storage/framework/cache storage/framework/sessions storage/framework/views storage/logs bootstrap/cache database \
-    && touch database/database.sqlite \
     && chown -R www-data:www-data storage bootstrap/cache database
 
 COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
