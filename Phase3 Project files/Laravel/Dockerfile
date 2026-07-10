@@ -19,7 +19,7 @@ WORKDIR /var/www/html
 COPY . .
 
 RUN composer install --no-dev --optimize-autoloader --no-interaction \
-    && mkdir -p storage/framework/{cache,sessions,views} storage/logs bootstrap/cache database \
+    && mkdir -p storage/framework/cache storage/framework/sessions storage/framework/views storage/logs bootstrap/cache database \
     && touch database/database.sqlite \
     && chown -R www-data:www-data storage bootstrap/cache database
 
