@@ -41,7 +41,11 @@ import HCompliance from "./components/HealthAdmin/Compliance.jsx";
 import PhMedication from "./components/Pharmacist/Medication.jsx";
 import PhDispensation from "./components/Pharmacist/Dispensation.jsx";
 
-const pathname = window.location.pathname;
+const publicUrl = process.env.PUBLIC_URL || '';
+let pathname = window.location.pathname;
+if (publicUrl && pathname.indexOf(publicUrl) === 0) {
+  pathname = pathname.slice(publicUrl.length) || '/';
+}
 ReactSession.setStoreType('localStorage');
 function App() {
 
