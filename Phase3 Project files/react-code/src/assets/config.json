@@ -1,4 +1,5 @@
 {
     "server": "https://finalproject-backend-5znn.onrender.com",
+    "chatServer": "https://finalproject-chat.onrender.com",
     "serverCloud-notusing": "https://backend.pxn2799.uta.cloud  http://127.0.0.1:8000"
 }

@@ -48,7 +48,7 @@ class Main extends React.Component {
         recipientName: '',
         recipientType: '',
         recipientId: 0,
-        socket: io('http://localhost:5000', {
+        socket: io(config.chatServer, {
             withCredentials: true,
         })
       }

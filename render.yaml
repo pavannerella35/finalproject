@@ -26,3 +26,10 @@ services:
         value: file
       - key: QUEUE_CONNECTION
         value: sync
+  - type: web
+    name: finalproject-chat
+    runtime: node
+    plan: free
+    rootDir: Phase3 Project files/chat-node
+    buildCommand: npm install
+    startCommand: node index.js
