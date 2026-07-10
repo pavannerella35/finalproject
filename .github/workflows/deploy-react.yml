@@ -1,4 +1,5 @@
 name: Deploy React frontend to GitHub Pages
+# Pages source configured for GitHub Actions
 
 on:
   push:
