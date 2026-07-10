@@ -54,3 +54,10 @@ Route::middleware('cors')->post('/compliance', [ComplianceController::class, 'ac
 
 Route::middleware('cors')->post('/dashboard', [DashboardController::class, 'action'])
     ->withoutMiddleware(\App\Http\Middleware\VerifyCsrfToken::class);
+
+Route::get('/__debug_routes', function () {
+    $routes = collect(\Illuminate\Support\Facades\Route::getRoutes())->map(function ($r) {
+        return $r->methods()[0] . ' ' . $r->uri();
+    });
+    return response()->json($routes);
+});
