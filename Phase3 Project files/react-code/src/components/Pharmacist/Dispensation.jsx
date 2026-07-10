@@ -112,7 +112,7 @@ class Main extends React.Component {
                         <h5 className="card-title">Search</h5>
                         
 
-                        <form action="#">
+                        <form action="#" onSubmit={(e) => e.preventDefault()}>
                             <div className="form-group">
                             <select id="patient" className="custom-select" >
                                 <option value="">Select doctor</option>

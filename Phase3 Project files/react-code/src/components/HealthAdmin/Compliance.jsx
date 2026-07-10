@@ -168,7 +168,7 @@ class Main extends React.Component {
                         <h5 className="card-title">Add rule/guidance</h5>
                         
 
-                        <form action="#">
+                        <form action="#" onSubmit={(e) => e.preventDefault()}>
                         <div className="form-group">
                                         <select id="type" className="custom-select">
                                             <option value="">Select rule/ guidance</option>

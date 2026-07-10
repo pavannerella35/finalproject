@@ -62,7 +62,7 @@ class Main extends React.Component {
                             <div className="card-body w3-center card-form">
                                 
                         
-                                <form action="#">
+                                <form action="#" onSubmit={(e) => e.preventDefault()}>
                                      
 
                                     <div className="form-group">

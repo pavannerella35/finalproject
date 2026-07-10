@@ -215,7 +215,7 @@ class Main extends React.Component {
                         <h5 className="card-title">Add Facility</h5>
                         
 
-                        <form action="#">
+                        <form action="#" onSubmit={(e) => e.preventDefault()}>
                         <div className="form-group">
                                         <select name="user" id="ward" className="custom-select">
                                             <option value="">Select ward type</option>

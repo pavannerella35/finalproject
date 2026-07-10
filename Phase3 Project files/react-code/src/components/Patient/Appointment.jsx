@@ -203,7 +203,7 @@ class Main extends React.Component {
                         <h5 className="card-title">Add</h5>
                         
 
-                        <form action="#">
+                        <form action="#" onSubmit={(e) => e.preventDefault()}>
                             <div className="form-group">
                             <select className="custom-select" id="doctor">
                             <option value="">Select doctor</option>

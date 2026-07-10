@@ -132,7 +132,7 @@ class Main extends React.Component {
                         <h5 className="card-title">Select symptoms</h5>
                         
 
-                        <form action="#">
+                        <form action="#" onSubmit={(e) => e.preventDefault()}>
                             <div className="form-group">
                             <select className="custom-select" id="symptom1">
                             {
@@ -153,7 +153,7 @@ class Main extends React.Component {
                             </div>
 
                             
-                            <button className="btn-al btn-primary-al"  onClick={(e) => this.check()}>Check</button>
+                            <button className="btn-al btn-primary-al" type="button" onClick={(e) => this.check()}>Check</button>
                         </form>
                         </div>
                     </div>

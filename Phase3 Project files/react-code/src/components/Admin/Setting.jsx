@@ -131,7 +131,7 @@ class Main extends React.Component {
                                 
                             {
                                 this.state.users.map(user => (
-                                <form action="#">
+                                <form action="#" onSubmit={(e) => e.preventDefault()}>
                                     <div className="form-group">
                                         <input type="text" className="form-control" id={"name" + user.userId} value={ReactSession.get("userName")}  disabled/>
                                     </div> 

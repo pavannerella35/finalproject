@@ -232,7 +232,7 @@ class Main extends React.Component {
                                 <h5 className="card-title">Add user</h5>
                         
 
-                                <form action="#">
+                                <form action="#" onSubmit={(e) => e.preventDefault()}>
                                     <div className="form-group">
                                         <input type="text" className="form-control" id="uname" placeholder="Enter name" required/>
                                     </div> 

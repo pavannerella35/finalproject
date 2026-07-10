@@ -235,7 +235,7 @@ class Main extends React.Component {
                         <h5 className="card-title">Add history</h5>
                         
 
-                        <form action="#">
+                        <form action="#" onSubmit={(e) => e.preventDefault()}>
                             <div className="form-group">
                             <label for="prescribed">Prescribed By</label>
                             <select className="custom-select" id="doctor">
