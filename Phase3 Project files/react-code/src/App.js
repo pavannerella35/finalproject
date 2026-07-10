@@ -52,7 +52,7 @@ function App() {
 
   if (route[1] == 'doctor' && ReactSession.get("loggedIn") && ReactSession.get("userType") === 'doctor') {
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <div className='body'>
           <Nav />
           <Switch>
@@ -69,7 +69,7 @@ function App() {
   }
   else if (route[1] == 'patient' && ReactSession.get("loggedIn") && ReactSession.get("userType") === 'patient') {
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <div className='body'>
           <Nav />
           <Switch>
@@ -87,7 +87,7 @@ function App() {
   }
   else if (route[1] == 'admin' && ReactSession.get("loggedIn") && ReactSession.get("userType") === 'admin') {
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <div className='body'>
           <Nav />
           <Switch>
@@ -104,7 +104,7 @@ function App() {
   }
   else if (route[1] == 'healthAdmin' && ReactSession.get("loggedIn") && ReactSession.get("userType") === 'healthAdmin') {
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <div className='body'>
           <Nav />
           <Switch>
@@ -120,7 +120,7 @@ function App() {
   }
   else if (route[1] == 'pharmacist' && ReactSession.get("loggedIn") && ReactSession.get("userType") === 'pharmacist') {
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <div className='body'>
           <Nav />
           <Switch>
@@ -135,7 +135,7 @@ function App() {
   }
   else if (route[1] == 'about') {
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Switch>
           <Route path="/about" exact component={() => <About />} />
         </Switch>
@@ -144,7 +144,7 @@ function App() {
   }
   else if (route[1] == 'service') {
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Switch>
           <Route path="/service" exact component={() => <Service />} />
         </Switch>
@@ -153,7 +153,7 @@ function App() {
   }
   else if (route[1] == 'contact') {
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Switch>
           <Route path="/contact" exact component={() => <Contact />} />
         </Switch>
@@ -162,7 +162,7 @@ function App() {
   }
   else if (route[1] == 'login') {
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Switch>
           <Route path="/login" exact component={() => <Login />} />
         </Switch>
@@ -171,7 +171,7 @@ function App() {
   }
   else if (route[1] == 'signup') {
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Switch>
           <Route path="/signup" exact component={() => <Signup />} />
         </Switch>
@@ -180,7 +180,7 @@ function App() {
   }
   else if (route[1] == 'forgot') {
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Switch>
           <Route path="/forgot" exact component={() => <Forgot />} />
         </Switch>
@@ -189,7 +189,7 @@ function App() {
   }
   else if (route[1] == 'home') {
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Switch>
           <Home />
         </Switch>
@@ -198,7 +198,7 @@ function App() {
   }
   else if (route[1] == '') {
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Switch>
           <Home />
         </Switch>

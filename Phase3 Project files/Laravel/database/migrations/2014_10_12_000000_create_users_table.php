@@ -14,11 +14,18 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id();
+            // Primary key named "userId" to match the raw DB::table('users')
+            // queries used throughout the controllers (e.g. ->where('userId', ...)).
+            $table->id('userId');
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('userType')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('address')->nullable();
+            $table->boolean('active')->default(true);
+            $table->unsignedBigInteger('programId')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

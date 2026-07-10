@@ -13,6 +13,14 @@ class User extends Authenticatable
     use HasApiTokens, HasFactory, Notifiable;
 
     /**
+     * The primary key column name (matches the raw queries used in
+     * the controllers, e.g. DB::table('users')->where('userId', ...)).
+     *
+     * @var string
+     */
+    protected $primaryKey = 'userId';
+
+    /**
      * The attributes that are mass assignable.
      *
      * @var string[]
