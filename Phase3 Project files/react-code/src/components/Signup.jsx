@@ -230,7 +230,11 @@ class Main extends React.Component {
             else
               alert("Could not send mail");
           }
-       })    
+       })
+       .catch(err => {
+          console.error(err);
+          alert('Unable to reach the server. Please check your connection and try again.');
+       })
   }
 
   render() {

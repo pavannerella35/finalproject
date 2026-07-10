@@ -218,7 +218,7 @@ function App() {
     ReactSession.remove("userName");
     ReactSession.remove("userType");
 
-    window.location.replace(origin + '/login')
+    window.location.replace(origin + (process.env.PUBLIC_URL || '') + '/login')
   }
   else {
     return (

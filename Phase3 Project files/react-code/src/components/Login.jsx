@@ -208,7 +208,7 @@ class Main extends React.Component {
 
           const userType = $('#userType');
 
-          let url = origin + "/" + res.data.message.userType + "/home";
+          let url = (window.location.origin + (process.env.PUBLIC_URL || "")) + "/" + res.data.message.userType + "/home";
           
           console.log('url:' + url)
 
@@ -234,6 +234,10 @@ class Main extends React.Component {
         else {
           alert(res.data.message)
         }
+      })
+      .catch(err => {
+        console.error(err);
+        alert('Unable to reach the server. Please check your connection and try again.');
       })
   }
 

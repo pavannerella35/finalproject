@@ -204,6 +204,10 @@ class Main extends React.Component {
           alert(res.data.message)
         }
       })
+      .catch(err => {
+        console.error(err);
+        alert('Unable to reach the server. Please check your connection and try again.');
+      })
   }
 
   render() {
