@@ -7,7 +7,11 @@ import "../../assets/css/style.css";
 
 import config from "../../assets/config.json"
 
-const pathname = window.location.pathname;
+const publicUrl = process.env.PUBLIC_URL || '';
+let pathname = window.location.pathname;
+if (publicUrl && pathname.indexOf(publicUrl) === 0) {
+  pathname = pathname.slice(publicUrl.length) || '/';
+}
 var route = pathname.split("/");
 const userType = route[1];
 const page = route[2];
