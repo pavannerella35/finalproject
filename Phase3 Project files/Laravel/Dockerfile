@@ -1,4 +1,4 @@
-FROM php:8.2-apache
+FROM php:8.1-apache
 
 # System deps + PHP extensions Laravel needs
 RUN apt-get update && apt-get install -y \
